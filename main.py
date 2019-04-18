@@ -1,7 +1,16 @@
+import sys
+
 def printTree(printString):
-    with open("output.txt","w+") as out:
-        out.write(printString)
-        print(printString)
+    try:
+        if len(sys.argv)>1:
+            with open(sys.argv[1],"w+") as out:
+                out.write(printString)
+        else:
+            with open("output.txt","w+") as out:
+                out.write(printString)
+    except:
+        print("FEHLER! Textfile konnte nicht geschrieben werden.")
+    print(printString)
 
 def treeNode(parent):
     left = input(f"Linkes Kind von {parent}?\n")
