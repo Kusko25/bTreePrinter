@@ -48,11 +48,11 @@ def worker():
     out = "child{"+left+"}\nchild{"+right+"}\n"
     levelstyles = [
     "every node/.style={circle, draw=black}",
-    "level 1/.style={circle, draw=black,sibling distance=15em}",
-    "level 2/.style={circle, draw=black,sibling distance=10em}",
-    "level 3/.style={circle, draw=black,sibling distance=7em}",
-    "level 4/.style={circle, draw=black,sibling distance=3em}",
-    "level 4+/.style={circle, draw=black,sibling distance=3em}"
+    "level 1/.style={sibling distance=15em}",
+    "level 2/.style={sibling distance=10em}",
+    "level 3/.style={sibling distance=7em}",
+    "level 4/.style={sibling distance=3em}",
+    "level 4+/.style={sibling distance=3em}"
     ]
     tree = "\\begin{center}\n\\begin{tikzpicture}[\n"+ ",\n".join(levelstyles) +"]\n\\node{"+root+"}\n"\
         + out + \
